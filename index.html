@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Using APIs</title>
+  </head>
+  <body>
+    <div class="jumbotron" id="start-prompt">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-12 d-flex justify-content-center align-content-center"
+          >
+            <div class="card" style="width: 28rem;">
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title">Coding Quiz Challenge</h5>
+
+                <p class="card-text">
+                  Try to answer the following code-related questions within the
+                  time limit. Keep in mind that incorrect answers will penalize
+                  your score/time by ten seconds!
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-secondary card-link btn-block"
+                  id="start-button"
+                  >Start</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron quiz-background hide" id="quiz">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-12 d-flex justify-content-center align-content-center"
+          >
+            <div class="card" style="width: 28rem;">
+              
+              <div class="card-body d-flex flex-column align-items-center px-5">
+                <h5 class="card-title">Coding Quiz Challenge</h5>
+                <div class="score-timer d-flex">
+                  <h5 class="text-uppercase">score</h5>
+                  <h5 class="text-uppercase" id="score">0</h5>
+                </div>
+                <div class="score-timer d-flex">
+                  <h5 class="text-uppercase">time remaining</h5>
+                  <h5 class="text-uppercase" id="time-remaining"></h5>
+                </div>
+               
+                
+                <!--score-timer-->
+
+                <p class="card-text question">
+                  Question
+                </p>
+
+                <ul class="list-group text-center answers-list"></ul>
+              </div>
+              <!--cardbody-->
+            </div>
+            <!--card-->
+          </div>
+          <!-- col-->
+        </div>
+        <!--row-->
+
+      </div>
+      <!-- container -->
+    </div>
+    <!--jumbotron-->
+    <div class="jumbotron  hide" id="final-score">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center align-content-center">
+            <div class="card" style="width: 28rem;">
+              <div class="card-body d-flex flex-column align-items-center px-5">
+                <h5 class="card-title">Coding Quiz Challenge</h5>
+                <p class="card-text">Save your score to compare with others</p>
+                <div class="score-timer d-flex">
+                  <h5 class="text-uppercase">score</h5>
+                  <h5 class="text-uppercase" id="score-final">0</h5>
+                </div>
+                  <div class="form-group wide">
+                    <label for="initials">Initials</label>
+                    <input type="text" class="form-control " id="initials" >
+                  </div>
+
+                  <div class="btn-group wide" role="group" aria-label="Basic example">
+                     <button type="submit" class="btn btn-secondary  " id="submit-initials">Submit</button>
+                    <button type="submit" class="btn btn-secondary  retake" id="retake" onclick="startQuiz()">Retake </button>
+                  </div>
+                 
+                 
+                  
+                  <div class=" text-danger hide" id="error-enter-initials">Please enter your initials to see your ranking.</div>
+
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="jumbotron hide" id="final-ranking">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center align-content-center">
+            <div class="card" style="width: 28rem;">
+              <div class="card-body d-flex flex-column align-items-center px-5">
+                <h5 class="card-title">Coding Quiz Challenge</h5>Coding Quiz Challenge</h5>
+                <p class="card-text">Your Ranking</p>
+                <ul class="list-group text-center " id="ranking-list"></ul>
+                <div class="btn-group wide" role="group" aria-label="Basic example">
+                  <button class="btn btn-secondary " id="cornify-btn">Cornify</button>
+                 <button type="submit" class="btn btn-secondary  retake" id="retake" onclick="startQuiz()">Retake </button>
+               </div>
+                 
+                 
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="./js/questions.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.hide {
+  display: none;
+}
+.list-group {
+  width: 100%;
+}
+.score-timer {
+  width: 100%;
+  justify-content: space-between;
+}
+.wide {
+  width: 100%;
+}
